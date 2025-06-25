@@ -1,11 +1,13 @@
+//frontend/src/pages/Dashboard.js
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { User, LogOut, Shield, BarChart } from 'lucide-react';
+import RatingAnalyzer from '../components/RatingAnalyzer';
 
 const Dashboard = () => {
   const [user, setUser] = useState(null);
-  const [apiResponse, setApiResponse] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [imageLoaded, setImageLoaded] = useState(true);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -30,34 +32,6 @@ const Dashboard = () => {
     navigate('/');
   };
 
-  const testProtectedAPI = async () => {
-    setLoading(true);
-    const token = localStorage.getItem('token');
-    
-    try {
-      const response = await fetch('http://localhost:5001/api/rating-analyzer', {
-        headers: {
-          'Authorization': `Bearer ${token}`,
-          'Content-Type': 'application/json'
-        }
-      });
-      
-      if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.message || 'Failed to access protected route');
-      }
-      
-      const data = await response.json();
-      setApiResponse(data);
-      console.log('Protected API response:', data);
-    } catch (error) {
-      console.error('Error accessing protected API:', error);
-      alert(`Error: ${error.message}`);
-    } finally {
-      setLoading(false);
-    }
-  };
-
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Navigation */}
@@ -65,13 +39,24 @@ const Dashboard = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16">
             <div className="flex items-center">
-              <div className="flex items-center gap-2">
-                <span className="font-bold text-2xl text-gray-900">
-                  {'{ik}'}
-                </span>
-                <span className="font-medium text-xl text-gray-900">
-                  INTERVIEW KICKSTART
-                </span>
+              {/* Logo component */}
+              <div className="flex items-center">
+                {imageLoaded ? (
+                  <img 
+                    src="/interviewkickstart-logo.svg" 
+                    alt="Interview Kickstart Logo" 
+                    className="h-10" 
+                    onError={() => {
+                      console.error("Logo failed to load");
+                      setImageLoaded(false);
+                    }}
+                  />
+                ) : (
+                  <div className="flex items-center gap-2">
+                    <span className="text-blue-500 font-bold text-2xl">{'{'}<span className="font-bold">ik</span>{'}'}</span>
+                    <span className="text-blue-500 font-medium text-xl">INTERVIEW KICKSTART</span>
+                  </div>
+                )}
               </div>
             </div>
             <div className="flex items-center">
@@ -105,58 +90,31 @@ const Dashboard = () => {
             )}
           </div>
 
-           
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            
-
-            {/* Rating Analyzer Card */}
-            <div className="bg-white overflow-hidden shadow rounded-lg">
-              <div className="px-4 py-5 sm:p-6">
-                <div className="flex items-center">
-                  <div className="flex-shrink-0 bg-purple-500 rounded-md p-3">
-                    <svg className="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                    </svg>
-                  </div>
-                  <div className="ml-5 w-0 flex-1">
-                    <dl>
-                      <dt className="text-sm font-medium text-gray-500 truncate">
-                        Rating Analyzer
-                      </dt>
-                      <dd className="mt-1 text-3xl font-semibold text-gray-900">
-                        Ready
-                      </dd>
-                    </dl>
-                  </div>
-                </div>
-              </div>
-              <div className="bg-gray-50 px-4 py-4 sm:px-6">
-                <div className="text-sm">
-                  <button 
-                    onClick={() => console.log('Start analyzing clicked')}
-                    className="font-medium text-purple-600 hover:text-purple-500"
-                  >
-                    Start analyzing
-                  </button>
-                </div>
-              </div>
-            </div>
+          {/* Rating Analyzer Section */}
+          <div className="mb-8">
+            <RatingAnalyzer />
           </div>
-
-          {/* Protected API Test Section */}
-          
 
           {/* Additional Content */}
           <div className="mt-8">
-             
             <div className="bg-white shadow overflow-hidden sm:rounded-lg">
               <div className="px-4 py-5 sm:p-6">
                 <div className="space-y-4">
                   <p className="text-gray-700">
-                    Welcome to Interview Kickstart!.
+                    The Rating Analyzer helps you gain insights from session ratings using natural language queries. 
+                    Simply type your question, and our AI-powered system will analyze the data and provide answers.
                   </p>
                   
-                
+                  <div className="bg-blue-50 p-4 rounded-lg">
+                    <h3 className="text-blue-800 font-medium">Example Questions You Can Ask:</h3>
+                    <ul className="mt-2 text-blue-700 space-y-1 list-disc pl-5">
+                      <li>What is the instructor-wise average rating in Q2?</li>
+                      <li>Which cohort had the highest average rating in Q1?</li>
+                      <li>List all topics taught by a specific instructor along with their ratings.</li>
+                      <li>Which sessions were held on a specific date?</li>
+                      <li>Compare feedback ratings between different cohorts.</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>

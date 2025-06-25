@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "lotmusic-221912",
+  "private_key_id": "40b6209eb7d9740932ef52060ce14c56fecd3d73",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCc1txHqqKXehf3\nEajfv8jn17njYPVjpwSt0WIXc2OY4RwZJU1Lxh6omiSBL72hgdkHt11IHFqoPsMz\n7iqV262zSedqvbb23N+KBv8yOgL62zuFyxnlCXXAL5xXz3mA+TC9zOWZUI25V075\nnn30JqoZsJYT8bQjGLn/4StxpxG7mbhL5QKlY4Or6jcB/GVmT1s5KvQ0p230Qi7s\n9vadcpwWCeY609odX2R+E4NyjRyPAZY0ZmAuNTbtKMF4vnY0hOlAUjniv5Q972Mj\n1hfQ9QGXiLWhh1EtA/Q2jJKIvKjuImOqPKm68EdeZVoKGdt4tMVcTivK6lj4c0hN\nyD0XYJXrAgMBAAECggEAEC4WUYpn9aqR2FpJCrQ1XL2jnrJ8/kfXsrrcHME5sCbh\nCDMR81RAC3LDe1RagtPreOFQzUSnkZ3P84aJfCZKmClyp09lFbiZkxq/rwXPEuQV\nEutuA3PjYu1GesSbq1OJ1LrToOpvhIReUGAqbEqk17ug7/PKeqhtX9lx6uqqaKj8\nswYgpOGkEs5FvF8DvvpqtKWJWC8jBvVzDEZrf6FIfnisKv7ZwT6MWJV5+Xb0kmhz\njm9HsmxjzbLu9iSO9l1t1rWHbko6Ii/VD8fujG9a3FhTTxxC/jsrJWNtV84AaLLu\nSCLGDl6/9CITjfvSxMbkwdcOEHJKSRvhcq5sH1kFgQKBgQDT0YQcoPCMrxi8Zt56\ngbr4hAogk/MlhbojItS8l/2pcFRi11Om9rZZf14HvjSnbc6Ke18uw6OJHLo24a3S\nTQLhMT19zdF6UZVPjOqomVGYUQUoM1HKm8Y5J0sa31PCAzdKkHIOPN4oTWVXeVPb\nPVYqBvA+IcTYDqGDokJO77zBwQKBgQC9jZ6+TCczQCC1TxhPKFm1P8cgbU3j3FuE\neSmLAtCJZOESHIrjEIlApMAQZkWs7YOL5cB+3B7dtYUycHYwKAOE974iSL3FPkDj\nLQOA7IT1Cyxwox8k2+c8Crpqeeo89N0ge1PboQbdCR+GXlyiWAH4fVIeTBnGmzT9\nQXhrkeGqqwKBgGHZoOEky9sBrDikgNQxB/Fz9cW08xb7XtCKb6IryIe0l5cNh9xS\njkxr1UFYcbSCum4orgDJacuWVMOzn3vODa1/9LsgEEwkUghsvZ5jLVli3DIE+xzQ\nt1KBv2VLk8LFf45Xigjfv3T4w/8T0lQuUpaZm/Pn36o7oAtSMrWKdDVBAoGAcaf5\nByGiX5iUBCLo8I3BPGyBeXAQxA/c0BHWVwPZBoj2a2Wx4XSI17nxb+Pi402HEtsw\nEODroQS2WQgV1cooUhI6b1QudZZeUdkrwKIRFt0cSG2GvxMcE2RbYny3dtVbwZ4x\nKf/jnaVawbbS1ITwqY57Lq9yxSNLIo+fJODT7wECgYA7dqO9CPGk1VkZLz/LE3ZB\nM3X/baX8fk4zOKij6zrM03DmE5DL2NfF6qzKDeLrVjIZwFSy9rR3KMK8ocLSZDpY\nyd3ncVykoENW3cSginh8VSF/CC0gK/SCN/yZO1g8j7ZpntvH5v2EDd2NMNzvgMF9\npGJu0+8xzKSNHsgUoMTtmg==\n-----END PRIVATE KEY-----\n",
+  "client_email": "rating-analyser@lotmusic-221912.iam.gserviceaccount.com",
+  "client_id": "115126204868564414412",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/rating-analyser%40lotmusic-221912.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

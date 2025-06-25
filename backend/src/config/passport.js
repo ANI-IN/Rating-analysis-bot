@@ -1,10 +1,11 @@
+//backend/src/config/passport.js
 const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const User = require('../models/User');
 
 // Add some debugging
-console.log('Google Client ID:', process.env.GOOGLE_CLIENT_ID ? 'exists' : 'missing');
-console.log('Google Client Secret:', process.env.GOOGLE_CLIENT_SECRET ? 'exists' : 'missing');
+//console.log('Google Client ID:', process.env.GOOGLE_CLIENT_ID ? 'exists' : 'missing');
+//console.log('Google Client Secret:', process.env.GOOGLE_CLIENT_SECRET ? 'exists' : 'missing');
 
 passport.use(
   new GoogleStrategy(

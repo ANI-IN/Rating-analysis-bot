@@ -1,3 +1,4 @@
+//frontend/src/services/api.js
 const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5001/api';
 
 export const authAPI = {
@@ -125,5 +126,36 @@ export const authAPI = {
 
   googleLogin: () => {
     window.location.href = `${API_URL}/auth/google`;
+  },
+};
+
+export const ratingAPI = {
+  analyzeQuery: async (query) => {
+    try {
+      const token = localStorage.getItem('token');
+      
+      if (!token) {
+        throw new Error('Authentication required');
+      }
+      
+      const response = await fetch(`${API_URL}/rating-analyzer`, {
+        method: 'POST',
+        headers: { 
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`
+        },
+        body: JSON.stringify({ query }),
+      });
+      
+      if (!response.ok) {
+        const error = await response.json();
+        throw new Error(error.message || 'Query analysis failed');
+      }
+      
+      return response.json();
+    } catch (error) {
+      console.error('Rating analyzer error:', error);
+      throw error;
+    }
   },
 };

@@ -1,3 +1,4 @@
+//backend/src/middlewares/validate.js
 const { body, validationResult } = require('express-validator');
 
 // Validation rules

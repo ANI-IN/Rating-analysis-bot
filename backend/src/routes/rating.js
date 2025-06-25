@@ -1,13 +1,10 @@
+//backend/src/routes/rating.js
 const express = require('express');
 const router = express.Router();
 const { protect } = require('../middlewares/auth');
+const { processQuery } = require('../controllers/ratingAnalyzerController');
 
-// Rating analyzer endpoint (protected route)
-router.get('/rating-analyzer', protect, (req, res) => {
-  res.json({
-    message: 'Rating analyzer endpoint',
-    user: req.user,
-  });
-});
+// Protected route to analyze ratings
+router.post('/rating-analyzer', protect, processQuery);
 
 module.exports = router;

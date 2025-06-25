@@ -1,3 +1,4 @@
+//backend/src/config/database.js
 const mongoose = require('mongoose');
 
 const connectDB = async () => {

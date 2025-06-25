@@ -1,3 +1,4 @@
+//frontend/src/pages/AuthPage.js
 import React, { useState } from 'react';
 import { Mail, Lock, User, CheckCircle } from 'lucide-react';
 import { authAPI } from '../services/api';  // Make sure this import is correct
@@ -148,18 +149,18 @@ export default function AuthPage() {
   const renderAuthForm = () => (
     <div className="w-full max-w-md mx-auto p-8 bg-white rounded-2xl shadow-lg" style={styles}>
       {/* Logo */}
-      <div className="mb-8">
-        <div className="flex items-center gap-2 mb-2">
-          <span className="font-bold text-2xl" style={{ color: colors.darkText }}>
-            {'{ik}'}
-          </span>
-          <span className="font-medium text-xl" style={{ color: colors.darkText }}>
-            INTERVIEW KICKSTART
-          </span>
-        </div>
-        <p className="text-sm" style={{ color: colors.lightText }}>
-          Get <span style={{ color: colors.primary, fontWeight: 'medium' }}>tech interview-ready</span> today
-        </p>
+      <div className="flex items-center gap-2 mb-2">
+          <img
+            src="/interviewkickstart-logo.svg"
+            alt="Interview Kickstart Logo"
+            className="h-10"
+            onError={(e) => {
+              e.target.onerror = null;
+              e.target.style.display = 'none';
+            }}
+          />
+          <br />
+          <br />
       </div>
 
       {/* Tab Navigation */}

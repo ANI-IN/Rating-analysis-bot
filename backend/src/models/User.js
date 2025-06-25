@@ -1,3 +1,4 @@
+//backend/src/models/User.js
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 
@@ -27,8 +28,8 @@ const userSchema = new mongoose.Schema({
     type: Boolean,
     default: false,
   },
-  resetPasswordToken: String,
-  resetPasswordExpire: Date,
+  resetPasswordToken: String,     // option can be implemented in future
+  resetPasswordExpire: Date,      // same as above
 }, {
   timestamps: true,
 });

@@ -1,3 +1,4 @@
+//frontend/src/components/LoadingSpinner.js
 import React from 'react';
 import { Loader } from 'lucide-react';
 

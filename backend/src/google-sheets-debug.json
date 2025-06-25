@@ -1,0 +1,68 @@
+{
+  "environment": {
+    "SHEET_ID": "✓ Set",
+    "SERVICE_ACCOUNT_KEY_PATH": "✓ Set",
+    "KEY_FILE_EXISTS": "✓ File exists",
+    "KEY_FILE_JSON": "✓ Valid JSON",
+    "KEY_FILE_FIELDS": "✓ Contains required fields",
+    "CLIENT_EMAIL": "✓ rating-analyser@lotmusic-221912.iam.gserviceaccount.com"
+  },
+  "sheets": {
+    "AUTH": "✓ Authentication successful",
+    "SPREADSHEET_ACCESS": "✓ Successfully accessed spreadsheet",
+    "SPREADSHEET_TITLE": "Copy of Q1 2025_Q2  - Domain Class Poll feedback",
+    "SHEET_NAMES": [
+      "Sheet1",
+      "Copy of Live Class Poll",
+      "Pivot",
+      "Live Class Legend",
+      "Pivot Table 3",
+      "InstructorTopic code Legend"
+    ],
+    "DATA_ACCESS": {
+      "Sheet1": {
+        "success": true,
+        "rowCount": 5,
+        "headers": [
+          "Topic Code",
+          "Type",
+          "Domain"
+        ]
+      },
+      "Copy of Live Class Poll": {
+        "success": true,
+        "rowCount": 5,
+        "headers": [
+          "Topic Code",
+          "Type",
+          "Domain"
+        ]
+      },
+      "Pivot": {
+        "success": true,
+        "rowCount": 5,
+        "headers": []
+      },
+      "Live Class Legend": {
+        "success": true,
+        "rowCount": 5,
+        "headers": [
+          "Data Engineering Assignment Review"
+        ]
+      },
+      "Pivot Table 3": {
+        "success": true,
+        "rowCount": 4,
+        "headers": []
+      },
+      "InstructorTopic code Legend": {
+        "success": true,
+        "rowCount": 1,
+        "headers": [
+          "#REF!"
+        ]
+      }
+    }
+  },
+  "errors": []
+}

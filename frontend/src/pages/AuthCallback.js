@@ -1,3 +1,4 @@
+//frontend/src/pages/AuthCallback.js
 import { useEffect } from 'react';
 import { useSearchParams, useNavigate } from 'react-router-dom';
 import LoadingSpinner from '../components/LoadingSpinner';
